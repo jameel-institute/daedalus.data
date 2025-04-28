@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ji.rpkg.template: TAGLINE
+# DAEDALUS data
 
 <!-- badges: start -->
 
@@ -17,13 +17,12 @@ coverage](https://codecov.io/gh/jameel-institute/ji.rpkg.template/branch/main/gr
 status](https://www.r-pkg.org/badges/version/ji.rpkg.template)](https://CRAN.R-project.org/package=ji.rpkg.template)
 <!-- badges: end -->
 
-*ji.rpkg.template* is a template package and repository on which future
-Jameel Institute packages are based.
+*daedalus.data* is a package and repository to handle input data files
+for [*daedalus*](https://jameel-institute.github.io/daedalus/), Jameel
+Institute’s combined economic-epidemiological model of emerging
+respiratory pandemic diseases.
 
-To use this template, select *ji.rpkg.template* from the drop-down menu
-under **Repository template** when creating a new repository in the
-Jameel Institute organisation. Replace all instances of
-“ji.rpkg.template” with your package name. Make sure to also:
+Make sure to also:
 
 1.  Edit the `DESCRIPTION` as appropriate with the correct package
     information;
@@ -36,26 +35,24 @@ Jameel Institute organisation. Replace all instances of
 
 ## Installation
 
-**NOTE:** Remove or comment out installation sources as appropriate.
-
 You can install the development version of ji.rpkg.template from the
 Jameel Institute R-universe with:
 
 ``` r
-# installation from R-universe
-# install.packages(
-#   "ji.rpkg.template", 
-#   repos = c(
-#     "https://jameel-institute.r-universe.dev", "https://cloud.r-project.org"
-#   )
-# )
+installation from R-universe
+install.packages(
+ "daedalus.data",
+ repos = c(
+   "https://jameel-institute.r-universe.dev", "https://cloud.r-project.org"
+ )
+)
 ```
 
 or from GitHub [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("pak")
-# pak::pak("jameel-institute/ji.rpkg.template")
+install.packages("pak")
+pak::pak("jameel-institute/daedalus.data")
 ```
 
 ## Quick start

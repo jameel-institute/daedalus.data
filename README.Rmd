@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# ji.rpkg.template: TAGLINE
+# DAEDALUS data
 
 <!-- badges: start -->
 [![Project Status: Concept – Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
@@ -24,10 +24,9 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/ji.rpkg.template)](https://CRAN.R-project.org/package=ji.rpkg.template)
 <!-- badges: end -->
 
-_ji.rpkg.template_ is a template package and repository on which future Jameel Institute packages are based.
+_daedalus.data_ is a package and repository to handle input data files for [_daedalus_](https://jameel-institute.github.io/daedalus/), Jameel Institute's combined economic-epidemiological model of emerging respiratory pandemic diseases.
 
-To use this template, select _ji.rpkg.template_ from the drop-down menu under **Repository template** when creating a new repository in the Jameel Institute organisation.
-Replace all instances of "ji.rpkg.template" with your package name. Make sure to also:
+Make sure to also:
 
 1. Edit the `DESCRIPTION` as appropriate with the correct package information;
 
@@ -37,25 +36,23 @@ Replace all instances of "ji.rpkg.template" with your package name. Make sure to
 
 ## Installation
 
-**NOTE:** Remove or comment out installation sources as appropriate.
-
 You can install the development version of ji.rpkg.template from the Jameel Institute R-universe with:
 
 ```r
-# installation from R-universe
-# install.packages(
-#   "ji.rpkg.template", 
-#   repos = c(
-#     "https://jameel-institute.r-universe.dev", "https://cloud.r-project.org"
-#   )
-# )
+installation from R-universe
+install.packages(
+ "daedalus.data",
+ repos = c(
+   "https://jameel-institute.r-universe.dev", "https://cloud.r-project.org"
+ )
+)
 ```
 
 or from GitHub [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("pak")
-# pak::pak("jameel-institute/ji.rpkg.template")
+install.packages("pak")
+pak::pak("jameel-institute/daedalus.data")
 ```
 
 ## Quick start
