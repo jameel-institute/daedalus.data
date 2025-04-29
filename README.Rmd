@@ -26,17 +26,14 @@ knitr::opts_chunk$set(
 
 _daedalus.data_ is a package and repository to handle input data files for [_daedalus_](https://jameel-institute.github.io/daedalus/), Jameel Institute's combined economic-epidemiological model of emerging respiratory pandemic diseases.
 
-Make sure to also:
 
-1. Edit the `DESCRIPTION` as appropriate with the correct package information;
+<!-- 3. Remove these instructions from `README.Rmd`, and re-render the `.md` file using `devtools::render_readme()`. -->
 
-2. Edit the files in `R/`, `tests/`, and `vignettes/` to suit your package;
-
-3. Remove these instructions from `README.Rmd`, and re-render the `.md` file using `devtools::render_readme()`.
+_daedalus.data_ prepares data objects to be used by the _daedalus_ (see [here](https://github.com/jameel-institute/daedalus)) model.
 
 ## Installation
 
-You can install the development version of ji.rpkg.template from the Jameel Institute R-universe with:
+You can install the development version of _daedalus.data_ from the Jameel Institute R-universe with:
 
 ```r
 installation from R-universe
@@ -55,15 +52,13 @@ install.packages("pak")
 pak::pak("jameel-institute/daedalus.data")
 ```
 
+### Installation notes
+
+Both _daedalus.data_ and _daedalus_ are under active development. To use them, alwasy ensure you have the latest versions on main branch.
+
+
 ## Quick start
 
-Add a simple example of using the package's main feature(s) here, with a minimum amount of code.
-If preparatory or plotting steps are needed, prefer to hide them to keep focus on the package functionality.
+### Infections data
 
-## Related projects
-
-Add information and links to related projects, such as research papers or packages, here.
-
-## References
-
-Space for references: REMOVE this text.
+Users can select infection parameters from among seven epidemics caused by directly-transmitted viral respiratory pathogens, which are stored in the package as `daedalus.data::infection_data`, with epidemic identifiers stored as `daedalus.data::epidemic_names`.
