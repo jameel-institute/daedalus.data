@@ -1,8 +1,10 @@
 ---
-title: "daedalus.data"
+title: "Using daedalus.data and daedalus"
 output: rmarkdown::html_vignette
+bibliography: resources/references.json
+link-citations: true
 vignette: >
-  %\VignetteIndexEntry{daedalus.data}
+  %\VignetteIndexEntry{Using daedalus.data and daedalus}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,19 +16,22 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+_daedalus.data_ is a package to handle input data files to use in the DAEDALUS model. The idea behind the development of this package is to have the flexibility to 
+* Update or otherwise modify the input data without needing to update the model package itself 
+* Curate reference websites for the source data files and develop semi-automated workflows to maintain them up-to-date
+* Ensure compatibility of the input data with the working version of the _daedalus_ model
+
+
+This vignette demonstates how to use _daedalus.data_ with the DAEDALUS model, as adapted from @haw2022 in R. The package provides data from @walker2020 on country demography, country workforce per economic sector, and social contacts between age groups in `country_data`.
+The package also provides data from @jarvis2024 on workplace contacts in economic sectors.
+Both datasets are accessed by internal functions to reduce the need for user input.
+
+
+```{r libraries}
 library(daedalus.data)
+library(daedalus)
 ```
 
-This is a special vignette, which shares the same name as the package.
-It will render as the "Get started" page in the navigation bar of _pkgdown_ websites.
 
-To develop it further:
-
-1. Rename the file to your package name;
-
-2. Add code and explainers to help users get started with using your package in this vignette;
-
-3. Remember to add and link references if needed.
 
 ## References
