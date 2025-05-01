@@ -10,19 +10,17 @@ yet, or the repository is only intended to be a limited example, demo,
 or
 proof-of-concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
 [![R build
-status](https://github.com/jameel-institute/ji.rpkg.template/workflows/R-CMD-check/badge.svg)](https://github.com/jameel-institute/ji.rpkg.template/actions/workflows/R-CMD-check.yaml)
+status](https://github.com/jameel-institute/daedalus.data/workflows/R-CMD-check/badge.svg)](https://github.com/jameel-institute/daedalus.data/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/jameel-institute/ji.rpkg.template/branch/main/graph/badge.svg)](https://app.codecov.io/gh/jameel-institute/ji.rpkg.template?branch=main)
+coverage](https://codecov.io/gh/jameel-institute/daedalus.data/branch/main/graph/badge.svg)](https://app.codecov.io/gh/jameel-institute/daedalus.data?branch=main)
 [![CRAN
-status](https://www.r-pkg.org/badges/version/ji.rpkg.template)](https://CRAN.R-project.org/package=ji.rpkg.template)
+status](https://www.r-pkg.org/badges/version/daedalus.data)](https://CRAN.R-project.org/package=daedalus.data)
 <!-- badges: end -->
 
 *daedalus.data* is a package and repository to handle input data files
 for [*daedalus*](https://jameel-institute.github.io/daedalus/), Jameel
 Institute’s combined economic-epidemiological model of emerging
 respiratory pandemic diseases.
-
-<!-- 3. Remove these instructions from `README.Rmd`, and re-render the `.md` file using `devtools::render_readme()`. -->
 
 *daedalus.data* prepares data objects to be used by the *daedalus* (see
 [here](https://github.com/jameel-institute/daedalus)) model.
