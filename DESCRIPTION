@@ -18,6 +18,7 @@ Suggests:
     knitr,
     rmarkdown,
     spelling,
+    checkmate,
     testthat (>= 3.0.0),
     daedalus (>= 0.2.8),
     dust2 (>= 0.3.22),
