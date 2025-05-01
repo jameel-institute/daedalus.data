@@ -8,6 +8,7 @@ test_that("daedalus.data::country_data: snapshot tests", {
 })
 
 
+skip("Current daedalus still contains data")
 test_that("daedalus.data::country_data: runs as in vignette", {
   
   # expect errors calling data from daedalus
