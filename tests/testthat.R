@@ -6,7 +6,11 @@
 # * https://r-pkgs.org/testing-design.html#sec-tests-files-overview
 # * https://testthat.r-lib.org/articles/special-files.html
 
+# nolint start
 library(testthat)
-library(ji.rpkg.template)
+library(checkmate)
+library(daedalus)
+library(daedalus.data)
+# nolint end
 
-test_check("ji.rpkg.template")
+test_check("daedalus.data")
