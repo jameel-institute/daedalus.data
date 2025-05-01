@@ -8,6 +8,15 @@
 \description{
 Package to handel input data for the daedalus model.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/jameel-institute/daedalus.data}
+  \item \url{https://jameel-institute.github.io/daedalus.data/}
+  \item Report bugs at \url{https://github.com/jameel-institute/daedalus.data/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Pablo Perez-Guzman \email{p.perez-guzman@imperial.ac.uk} (\href{https://orcid.org/0000-0002-5277-5196}{ORCID})
 
