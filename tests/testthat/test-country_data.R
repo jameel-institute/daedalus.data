@@ -17,6 +17,9 @@ test_that("daedalus.data::country_data: runs as in vignette", {
   
   # expect no conditions calling data from daedalus.data
   expect_no_condition(daedalus.data::country_data)
+  
+  # data is atomic
+  checkmate::assert_atomic(daedalus.data::closure_data)
 })
 
 
