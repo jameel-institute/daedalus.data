@@ -1,9 +1,15 @@
 # daedalus.data 0.0.1
 
-Initial package setup including GitHub Actions workflow and code quality checks. As per Jameel institute layout, this includes:
+Initial package setup. 
 
-- GH Actions workflows for R CMD check (fails on 'NOTE') and code test coverage;
+1. As per Jameel institute layout, this includes GitHub Actions workflow and code quality checks:
 
-- Linting, citation update, Readme rendering, and license year update workflows;
+    - GH Actions workflows for R CMD check (fails on 'NOTE') and code test coverage;
 
-- Spellchecking with known words list.
+    - Linting, citation update, Readme rendering, and license year update workflows;
+
+    - Spellchecking with known words list.
+
+2. All data files and functions ported over from `daedalus`
+
+3. Basic data test implemented.
