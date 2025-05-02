@@ -1,6 +1,5 @@
-# NOTE: Update the `url` field as needed
-# e.g. "https://jameel-institute.github.io/daedalus/"
-url: ~
+url: https://jameel-institute.github.io/daedalus.data/
 template:
   bootstrap: 5
   package: jameelinst.rpkg.theme
+# NOTE: empty for now; add articles as the package is further developed
