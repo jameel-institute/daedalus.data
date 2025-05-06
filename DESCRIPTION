@@ -1,5 +1,5 @@
 Package: daedalus.data
-Title: DAEDALUS data
+Title: DAEDALUS Data
 Version: 0.0.1
 Authors@R: c(
     person("Pablo", "Perez-Guzman", , "p.perez-guzman@imperial.ac.uk", role = c("aut", "cre"),
