@@ -4,7 +4,7 @@ Version: 0.0.1
 Authors@R: c(
     person("Pablo", "Perez-Guzman", , "p.perez-guzman@imperial.ac.uk", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5277-5196")),
-    person("Pratik", "Gupte", , "pratik.gupte@lshtm.ac.uk", role = c("aut", "cre"),
+    person("Pratik", "Gupte", , "pratik.gupte@lshtm.ac.uk", role = "aut",
            comment = c(ORCID = "0000-0001-5294-7819")),
     person("Patrick", "Doohan", role = "aut",
            comment = c(ORCID = "0000-0001-8076-1106")),
