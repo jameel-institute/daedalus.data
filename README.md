@@ -54,9 +54,21 @@ them, alwasy ensure you have the latest versions on main branch.
 
 ## Quick start
 
+This package contains the following data sets:
+
+``` r
+data(package = "daedalus.data")
+```
+
 ### Infections data
 
 Users can select infection parameters from among seven epidemics caused
 by directly-transmitted viral respiratory pathogens, which are stored in
 the package as `daedalus.data::infection_data`, with epidemic
 identifiers stored as `daedalus.data::epidemic_names`.
+
+## Related projects
+
+1.  [DAEDALUS](https://jameel-institute.github.io/daedalus/)
+2.  [DAEDALUS
+    Compare](https://github.com/jameel-institute/daedalus.compare)
