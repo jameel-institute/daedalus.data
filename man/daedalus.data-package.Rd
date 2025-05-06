@@ -4,7 +4,7 @@
 \name{daedalus.data-package}
 \alias{daedalus.data}
 \alias{daedalus.data-package}
-\title{daedalus.data: DAEDALUS data}
+\title{daedalus.data: DAEDALUS Data}
 \description{
 Package to handel input data for the daedalus model.
 }
@@ -19,6 +19,13 @@ Useful links:
 }
 \author{
 \strong{Maintainer}: Pablo Perez-Guzman \email{p.perez-guzman@imperial.ac.uk} (\href{https://orcid.org/0000-0002-5277-5196}{ORCID})
+
+Authors:
+\itemize{
+  \item Pratik Gupte \email{pratik.gupte@lshtm.ac.uk} (\href{https://orcid.org/0000-0001-5294-7819}{ORCID})
+  \item Patrick Doohan (\href{https://orcid.org/0000-0001-8076-1106}{ORCID})
+  \item Robert Johnson (\href{https://orcid.org/0000-0002-7365-0042}{ORCID})
+}
 
 Other contributors:
 \itemize{
