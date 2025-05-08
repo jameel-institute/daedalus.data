@@ -1,6 +1,9 @@
 pandoc: 3.1.11
-pkgdown: 2.1.1
+pkgdown: 2.1.2
 pkgdown_sha: ~
 articles:
-  ji-rpkg-template: ji-rpkg-template.html
-last_built: 2025-04-24T12:06Z
+  daedalus.data: daedalus.data.html
+last_built: 2025-05-08T09:09Z
+urls:
+  reference: https://jameel-institute.github.io/daedalus.data/reference
+  article: https://jameel-institute.github.io/daedalus.data/articles
