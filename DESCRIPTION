@@ -1,6 +1,6 @@
 Package: daedalus.data
 Title: DAEDALUS Data
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(
     person("Pablo", "Perez-Guzman", , "p.perez-guzman@imperial.ac.uk", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5277-5196")),
