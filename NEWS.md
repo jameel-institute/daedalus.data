@@ -1,3 +1,7 @@
+# daedalus.data 0.0.2
+
+- Use HFR in daedalus, instead of omega and gamma_H
+
 # daedalus.data 0.0.1
 
 Initial package setup. 
