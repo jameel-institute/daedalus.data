@@ -99,10 +99,10 @@ data_omega_eta <- merge(data_ifr_ihr, data_hosp)
 
 # calculate daily rates
 # eta = (ihr / p_sigma) / Tsh
-# p(death) = ifr / ihr
-# T{hosp} = p(death) * Thd + (1 - p(death)) * Threc
-# omega = p(death) / T{hosp}
-# gamma_H = (1 - p(death)) / T{hosp}
+# hfr = ifr / ihr
+# T{hosp} = hfr * Thd + (1 - hfr) * Threc
+# omega = hfr / T{hosp}
+# gamma_H = (1 - hfr) / T{hosp}
 data_omega_eta[, c("eta", "p_death") := list((ihr / ps) / Tsh, ifr / ihr)]
 data_omega_eta[, t_hosp := p_death * Thd + (1 - p_death) * Threc]
 data_omega_eta[,
