@@ -95,27 +95,19 @@ data_ifr_ihr <- dcast(
 data_hosp <- data_params[code_label %in% c("Tsh", "Thd", "Threc", "ps"), ] |>
   dcast(epidemic ~ code_label, value.var = "value")
 
-data_omega_eta <- merge(data_ifr_ihr, data_hosp)
+data_hfr_eta <- merge(data_ifr_ihr, data_hosp)
 
 # calculate daily rates
 # eta = (ihr / p_sigma) / Tsh
 # hfr = ifr / ihr
-# T{hosp} = hfr * Thd + (1 - hfr) * Threc
-# omega = hfr / T{hosp}
-# gamma_H = (1 - hfr) / T{hosp}
-data_omega_eta[, c("eta", "p_death") := list((ihr / ps) / Tsh, ifr / ihr)]
-data_omega_eta[, t_hosp := p_death * Thd + (1 - p_death) * Threc]
-data_omega_eta[,
-  c("omega", "gamma_H") := list(p_death / t_hosp, (1 - p_death) / t_hosp)
-]
+data_hfr_eta[, c("eta", "hfr") := list((ihr / ps) / Tsh, ifr / ihr)]
 
-data_omega_eta <- data_omega_eta[, c(
+data_hfr_eta <- data_hfr_eta[, c(
   "epidemic",
   "age_group",
   "ifr",
   "eta",
-  "omega",
-  "gamma_H"
+  "hfr"
 )]
 
 ## epsilon: relative contribution of asymptomatics
@@ -159,19 +151,18 @@ infection_data <- split(infection_data, by = "epidemic") |>
   })
 
 ## combine age-specific data
-data_omega_eta <- split(data_omega_eta, by = c("epidemic")) |>
+data_hfr_eta <- split(data_hfr_eta, by = c("epidemic")) |>
   lapply(function(dt) {
     list(
       ifr = dt[["ifr"]],
       eta = dt[["eta"]],
-      omega = dt[["omega"]],
-      gamma_H = dt[["gamma_H"]]
+      hfr = dt[["hfr"]]
     )
   })
 
 infection_data <- Map(
   infection_data,
-  data_omega_eta[names(infection_data)],
+  data_hfr_eta[names(infection_data)],
   f = function(x, y) {
     c(x, y)
   }
