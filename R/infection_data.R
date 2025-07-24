@@ -50,14 +50,11 @@
 #' - `gamma_Ia`: A single numeric value for the recovery rate from asymptomatic
 #' infection.
 #'
-#' - `gamma_H`: A numeric vector of length 4 for the age-specific recovery rate
-#' for individuals who are hospitalised.
+#' - `hfr`: A numeric vector of length 4 for the age-specific hospital fatality
+#' ratio.
 #'
 #' - `eta`: A numeric vector of length `N_AGE_GROUPS` (4) for the age-specific
 #' hospitalisation rate for individuals who are infectious and symptomatic.
-#'
-#' - `omega`: A numeric vector of length `N_AGE_GROUPS` (4) for the age-specific
-#' mortality rate for individuals who are hospitalised.
 #'
 #' - `rho`: A single numeric value for the rate at which infection-derived
 #' immunity wanes, returning individuals in the 'recovered' compartment to the
