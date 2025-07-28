@@ -49,7 +49,7 @@
 #'
 #' - `gamma_Ia`: A single numeric value for the recovery rate from asymptomatic
 #' infection.
-#' 
+#'
 #' - `gamma_H_recovery`: A single numeric value for the rate of transition 
 #' from hospital admission to recovery.
 #' 
