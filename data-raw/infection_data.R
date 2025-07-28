@@ -132,6 +132,17 @@ data_rho <- data_params[code_label == "Ti", ]
 data_rho[, value := 1 / value][, measure := "rho"]
 data_rho <- data_rho[, c("measure", "epidemic", "value")]
 
+## gamma_H: rate of transition from hospital to recovered
+data_gamma_H_recovery <- data_params[code_label == "Threc", ]
+data_gamma_H_recovery[, value := 1 / value][, measure := "gamma_H_recovery"]
+data_gamma_H_recovery <- 
+  data_gamma_H_recovery[, c("measure", "epidemic", "value")]
+
+## omega: rate of transition from hospital to recovered
+data_gamma_H_death <- data_params[code_label == "Thd", ]
+data_gamma_H_death[, value := 1 / value][, measure := "gamma_H_death"]
+data_gamma_H_death <- data_gamma_H_death[, c("measure", "epidemic", "value")]
+
 ## combine pathogen data and convert to named list of lists
 infection_data <- rbindlist(list(
   data_r0,
@@ -140,7 +151,9 @@ infection_data <- rbindlist(list(
   data_epsilon,
   data_rho,
   data_gamma_ia,
-  data_gamma_is
+  data_gamma_is,
+  data_gamma_H_recovery,
+  data_gamma_H_death
 ))
 infection_data <- split(infection_data, by = "epidemic") |>
   lapply(function(dt) {

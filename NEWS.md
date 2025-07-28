@@ -1,6 +1,6 @@
 # daedalus.data 0.0.2
 
-- Use HFR in daedalus, instead of omega and gamma_H
+- Pass age-specific HFR to process as conditional probability in daedalus.
 
 # daedalus.data 0.0.1
 
