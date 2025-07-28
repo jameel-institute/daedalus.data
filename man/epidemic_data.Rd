@@ -28,6 +28,10 @@ symptomatic individuals).
 individuals who are not hospitalised.
 \item \code{gamma_Ia}: A single numeric value for the recovery rate from asymptomatic
 infection.
+\item \code{gamma_H_recovery}: A single numeric value for the rate of transition
+from hospital admission to recovery.
+\item \code{gamma_H_death}: A single numeric value for the rate of transition from
+hospital admission to death.
 \item \code{hfr}: A numeric vector of length 4 for the age-specific hospital fatality
 ratio.
 \item \code{eta}: A numeric vector of length \code{N_AGE_GROUPS} (4) for the age-specific
