@@ -49,6 +49,12 @@
 #'
 #' - `gamma_Ia`: A single numeric value for the recovery rate from asymptomatic
 #' infection.
+#' 
+#' - `gamma_H_recovery`: A single numeric value for the rate of transition 
+#' from hospital admission to recovery.
+#' 
+#' - `gamma_H_death`: A single numeric value for the rate of transition from
+#' hospital admission to death.
 #'
 #' - `hfr`: A numeric vector of length 4 for the age-specific hospital fatality
 #' ratio.
