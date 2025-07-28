@@ -132,13 +132,13 @@ data_rho <- data_params[code_label == "Ti", ]
 data_rho[, value := 1 / value][, measure := "rho"]
 data_rho <- data_rho[, c("measure", "epidemic", "value")]
 
-## gamma_H: rate of transition from hospital to recovered
+## gamma_H_recovery: rate of transition from hospital to recovered
 data_gamma_H_recovery <- data_params[code_label == "Threc", ]
 data_gamma_H_recovery[, value := 1 / value][, measure := "gamma_H_recovery"]
 data_gamma_H_recovery <- 
   data_gamma_H_recovery[, c("measure", "epidemic", "value")]
 
-## omega: rate of transition from hospital to recovered
+## gamma_H_death: rate of transition from hospital to recovered
 data_gamma_H_death <- data_params[code_label == "Thd", ]
 data_gamma_H_death[, value := 1 / value][, measure := "gamma_H_death"]
 data_gamma_H_death <- data_gamma_H_death[, c("measure", "epidemic", "value")]
