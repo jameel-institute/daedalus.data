@@ -1,3 +1,7 @@
+# daedalus.data 0.0.3
+
+This patch version updates data files processed by `R/infection_data.R`.
+
 # daedalus.data 0.0.2
 
 - Pass age-specific HFR to process as conditional probability in daedalus.
