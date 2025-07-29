@@ -50,7 +50,26 @@ pak::pak("jameel-institute/daedalus.data")
 ### Installation notes
 
 Both *daedalus.data* and *daedalus* are under active development. To use
-them, alwasy ensure you have the latest versions on main branch.
+them, always ensure you have the latest versions on main branch.
+
+### Adding or modifying data
+
+Follow these basic principles. Refer to the [*Data* chapter in *R
+Packages*](https://r-pkgs.org/data.html) for guidance.
+
+1.  Add raw data (such as CSV files) under `inst/extdata`.
+
+2.  Add scripts that process raw data under `data-raw`. See existing
+    scripts for guidance. In these scripts, use `usethis::use_data()` to
+    save processed data into `data` as `.rda` files, which will be made
+    available as package data.
+
+    - To regenerate data, rerun these scripts.
+
+3.  Add documentation for package data under `R/<data_name>.R` See
+    existing files such as `R/country_data.R` for guidance.
+
+4.  Document changes in the changelog `NEWS.md`.
 
 ## Quick start
 
@@ -69,6 +88,8 @@ identifiers stored as `daedalus.data::epidemic_names`.
 
 ## Related projects
 
-1.  [DAEDALUS](https://jameel-institute.github.io/daedalus/)
-2.  [DAEDALUS
-    Compare](https://github.com/jameel-institute/daedalus.compare)
+1.  [daedalus](https://jameel-institute.github.io/daedalus/): Ingests
+    *daedalus.data* data to create S3 class objects representing
+    infections, populations, and epidemic mitigation measures.
+2.  [daedalus.compare](https://github.com/jameel-institute/daedalus.compare):
+    Ingests *daedalus* outputs to help compare epidemic scenarios.
