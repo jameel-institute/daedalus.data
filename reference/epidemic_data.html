@@ -13,7 +13,7 @@ convenience."></head><body>
     <a href="https://www.imperial.ac.uk/jameel-institute/" class="external-link"><img src="https://raw.githubusercontent.com/jameel-institute/jameelinst.rpkg.theme/refs/heads/main/inst/pkgdown/assets/logo_imperial_jameel.svg" id="logo" alt="Abdul Latif Jameel Institute for Disease and Emergency Analytics"></a>
     <a class="navbar-brand me-2" href="../index.html">daedalus.data</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.0.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,12 +88,14 @@ symptomatic individuals).</p></li>
 individuals who are not hospitalised.</p></li>
 <li><p><code>gamma_Ia</code>: A single numeric value for the recovery rate from asymptomatic
 infection.</p></li>
-<li><p><code>gamma_H</code>: A numeric vector of length 4 for the age-specific recovery rate
-for individuals who are hospitalised.</p></li>
+<li><p><code>gamma_H_recovery</code>: A single numeric value for the rate of transition
+from hospital admission to recovery.</p></li>
+<li><p><code>gamma_H_death</code>: A single numeric value for the rate of transition from
+hospital admission to death.</p></li>
+<li><p><code>hfr</code>: A numeric vector of length 4 for the age-specific hospital fatality
+ratio.</p></li>
 <li><p><code>eta</code>: A numeric vector of length <code>N_AGE_GROUPS</code> (4) for the age-specific
 hospitalisation rate for individuals who are infectious and symptomatic.</p></li>
-<li><p><code>omega</code>: A numeric vector of length <code>N_AGE_GROUPS</code> (4) for the age-specific
-mortality rate for individuals who are hospitalised.</p></li>
 <li><p><code>rho</code>: A single numeric value for the rate at which infection-derived
 immunity wanes, returning individuals in the 'recovered' compartment to the
 'susceptible' compartment.</p></li>
@@ -148,7 +150,7 @@ immunity wanes, returning individuals in the 'recovered' compartment to the
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer></div>
