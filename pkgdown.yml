@@ -3,7 +3,7 @@ pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   daedalus.data: daedalus.data.html
-last_built: 2025-07-29T13:36Z
+last_built: 2025-07-29T14:14Z
 urls:
   reference: https://jameel-institute.github.io/daedalus.data/reference
   article: https://jameel-institute.github.io/daedalus.data/articles
