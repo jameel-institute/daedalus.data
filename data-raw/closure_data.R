@@ -58,6 +58,7 @@ closure_data <- split(closure_data, by = "strategy") |>
 # add special strategy "none" to represent no response
 # might have non-zero values in future to represent spontaneous public
 # effects on openness
+N_ECON_SECTORS <- 45L
 closure_data[["none"]] <- list(
   light = rep(1.0, N_ECON_SECTORS),
   heavy = rep(1.0, N_ECON_SECTORS)
