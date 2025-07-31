@@ -1,5 +1,8 @@
 #' @title Pandemic response strategy data for DAEDALUS
 #'
+#' @name closure_strategies
+#' @rdname closure_strategies
+#'
 #' @description Coefficients of openness of economic sectors under different
 #' pandemic response strategies. There are four strategies (including no
 #' response, identified as `"none"`).
@@ -19,7 +22,10 @@
 #' }
 #' @source Multiple sources; to be updated shortly. See processing details in
 #' `data-raw/closure_data.R
-"closure_data"
+"closure_strategy_data"
+
+#' @name closure_strategies
+"closure_strategy_names"
 
 #' @title Economic sector names
 #'

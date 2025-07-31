@@ -1,4 +1,4 @@
-## code to prepare `closure_data` dataset goes here
+## code to prepare `closure_strategy_data` dataset goes here
 
 library(readxl)
 library(usethis)
@@ -45,10 +45,10 @@ strategies <- c("elimination", "economic_closures", "school_closures")
 levels <- c("heavy", "light")
 
 # prepare data.table of strategies and implementation level
-closure_data <- CJ(strategy = strategies, level = levels)
-closure_data[, openness := closure_coefs]
+closure_strategy_data <- CJ(strategy = strategies, level = levels)
+closure_strategy_data[, openness := closure_coefs]
 
-closure_data <- split(closure_data, by = "strategy") |>
+closure_strategy_data <- split(closure_strategy_data, by = "strategy") |>
   lapply(function(dt) {
     coefs <- dt[["openness"]]
     names(coefs) <- dt[["level"]]
@@ -59,7 +59,7 @@ closure_data <- split(closure_data, by = "strategy") |>
 # might have non-zero values in future to represent spontaneous public
 # effects on openness
 N_ECON_SECTORS <- 45L
-closure_data[["none"]] <- list(
+closure_strategy_data[["none"]] <- list(
   light = rep(1.0, N_ECON_SECTORS),
   heavy = rep(1.0, N_ECON_SECTORS)
 )
@@ -69,13 +69,15 @@ closure_data[["none"]] <- list(
 levels_to_keep <- c("heavy", rep("light", 3L))
 strategies <- c(strategies, "none")
 
-closure_data <- Map(
-  closure_data[strategies],
+closure_strategy_data <- Map(
+  closure_strategy_data[strategies],
   levels_to_keep,
   f = function(s, l) {
     s[[l]]
   }
 )
+closure_strategy_names <- names(closure_strategy_data)
 
 usethis::use_data(econ_sector_names, overwrite = TRUE)
-usethis::use_data(closure_data, overwrite = TRUE)
+usethis::use_data(closure_strategy_data, overwrite = TRUE)
+usethis::use_data(closure_strategy_names, overwrite = TRUE)
