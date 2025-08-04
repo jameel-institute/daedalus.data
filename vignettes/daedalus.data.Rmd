@@ -21,17 +21,13 @@ _daedalus.data_ is a package to handle input data files to use in the DAEDALUS m
 * Curate reference websites for the source data files and develop semi-automated workflows to maintain them up-to-date
 * Ensure compatibility of the input data with the working version of the _daedalus_ model
 
-
 This vignette demonstates how to use _daedalus.data_ with the DAEDALUS model, as adapted from @haw2022 in R. The package provides data from @walker2020 on country demography, country workforce per economic sector, and social contacts between age groups in `country_data`.
 The package also provides data from @jarvis2024 on workplace contacts in economic sectors.
 Both datasets are accessed by internal functions to reduce the need for user input.
-
 
 ```{r libraries}
 library(daedalus.data)
 library(daedalus)
 ```
-
-
 
 ## References
