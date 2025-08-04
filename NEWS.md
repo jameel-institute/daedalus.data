@@ -1,3 +1,7 @@
+# daedalus.data 0.0.3
+
+This PR introduces a **breaking change** and renames closure strategy data from `closure_data` to `closure_strategy_data`, and adds the `closure_strategy_names` data vector.
+
 # daedalus.data 0.0.2
 
 - Pass age-specific HFR to process as conditional probability in daedalus.
