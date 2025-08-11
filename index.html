@@ -24,7 +24,7 @@
     <a href="https://www.imperial.ac.uk/jameel-institute/" class="external-link"><img src="https://raw.githubusercontent.com/jameel-institute/jameelinst.rpkg.theme/refs/heads/main/inst/pkgdown/assets/logo_imperial_jameel.svg" id="logo" alt="Abdul Latif Jameel Institute for Disease and Emergency Analytics"></a>
     <a class="navbar-brand me-2" href="index.html">daedalus.data</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.0.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,23 +87,7 @@
 <div class="section level3">
 <h3 id="installation-notes">Installation notes<a class="anchor" aria-label="anchor" href="#installation-notes"></a>
 </h3>
-<p>Both <em>daedalus.data</em> and <em>daedalus</em> are under active development. To use them, always ensure you have the latest versions on main branch.</p>
-</div>
-<div class="section level3">
-<h3 id="adding-or-modifying-data">Adding or modifying data<a class="anchor" aria-label="anchor" href="#adding-or-modifying-data"></a>
-</h3>
-<p>Follow these basic principles. Refer to the <a href="https://r-pkgs.org/data.html" class="external-link"><em>Data</em> chapter in <em>R Packages</em></a> for guidance.</p>
-<ol style="list-style-type: decimal">
-<li><p>Add raw data (such as CSV files) under <code>inst/extdata</code>.</p></li>
-<li>
-<p>Add scripts that process raw data under <code>data-raw</code>. See existing scripts for guidance. In these scripts, use <code>usethis::use_data()</code> to save processed data into <code>data</code> as <code>.rda</code> files, which will be made available as package data.</p>
-<ul>
-<li>To regenerate data, rerun these scripts.</li>
-</ul>
-</li>
-<li><p>Add documentation for package data under <code>R/&lt;data_name&gt;.R</code> See existing files such as <code>R/country_data.R</code> for guidance.</p></li>
-<li><p>Document changes in the changelog <code>NEWS.md</code>.</p></li>
-</ol>
+<p>Both <em>daedalus.data</em> and <em>daedalus</em> are under active development. To use them, alwasy ensure you have the latest versions on main branch.</p>
 </div>
 </div>
 <div class="section level2">
@@ -122,10 +106,8 @@
 <h2 id="related-projects">Related projects<a class="anchor" aria-label="anchor" href="#related-projects"></a>
 </h2>
 <ol style="list-style-type: decimal">
-<li>
-<a href="https://jameel-institute.github.io/daedalus/" class="external-link">daedalus</a>: Ingests <em>daedalus.data</em> data to create S3 class objects representing infections, populations, and epidemic mitigation measures.</li>
-<li>
-<a href="https://github.com/jameel-institute/daedalus.compare" class="external-link">daedalus.compare</a>: Ingests <em>daedalus</em> outputs to help compare epidemic scenarios.</li>
+<li><a href="https://jameel-institute.github.io/daedalus/" class="external-link">DAEDALUS</a></li>
+<li><a href="https://github.com/jameel-institute/daedalus.compare" class="external-link">DAEDALUS Compare</a></li>
 </ol>
 </div>
 </div>
