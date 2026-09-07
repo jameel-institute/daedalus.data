@@ -23,7 +23,8 @@ economic sector in the model, in million dollars.}
 }
 \source{
 \doi{10.1126/science.abc0035} and OECD; see processing details in
-`data-raw/country_data.R
+`data-raw/country_data.R. Country GVA data are taken from OECD TiVA 2018
+data.
 }
 \usage{
 country_data
