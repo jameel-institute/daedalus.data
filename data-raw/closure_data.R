@@ -1,14 +1,10 @@
 ## code to prepare `closure_strategy_data` dataset goes here
 
-library(readxl)
 library(usethis)
 library(data.table)
 library(stringr)
 
-closures <- readxl::read_xlsx(
-  "inst/extdata/economic_closures.xlsx",
-  sheet = "configurations"
-)
+closures <- data.table::fread("inst/extdata/economic_closures.csv")
 
 econ_sector_names <- closures$Sector
 
@@ -17,7 +13,6 @@ new_colnames <- colnames(closures) |>
   str_to_lower() |>
   str_replace_all("\\s\\(|\\s", "_") |>
   str_remove_all("\\)")
-setDT(closures)
 setnames(closures, new_colnames)
 
 # round all coefficient values to two significant figures
