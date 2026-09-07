@@ -22,8 +22,12 @@ sector_contacts <- fread("inst/extdata/sectorcontacts.csv")
 # NOTE: there is an issue with Monaco where most data are missing
 
 #### process demography data ####
+# NOTE: need to convert cols to numeric to avoid int -> numeric conversion warns
 cols_demography <- colnames(country_data)[colnames(country_data) %like% "Npop"]
-country_demography <- country_data[, c("country", ..cols_demography)] |>
+country_demography <- country_data[, c("country", ..cols_demography)][,
+  (cols_demography) := lapply(.SD, as.numeric),
+  .SDcols = cols_demography
+] |>
   melt(id.vars = "country")
 
 bin_size <- 5L
@@ -36,8 +40,8 @@ country_demography[,
   )
 ]
 country_demography[, `:=`(
-  age_lower = (age_lower * bin_size) - bin_size,
-  age_upper = age_upper * bin_size
+  age_bin_lower = (age_lower * bin_size) - bin_size,
+  age_bin_upper = age_upper * bin_size
 )]
 
 # assume that intervals are open on the RHS, but note the subsetting
@@ -46,13 +50,13 @@ country_demography[, `:=`(
 daedalus_demography <- copy(country_demography)
 daedalus_demography[,
   age_group := fcase(
-    age_upper <= 5L,
-    "0-4",
-    age_lower >= 5L & age_upper <= 20L,
-    "5-19",
-    age_lower >= 20L & age_upper <= 65,
-    "20-64",
-    age_lower >= 65,
+    age_bin_upper <= 5L                        ,
+    "0-4"                                      ,
+    age_bin_lower >= 5L & age_bin_upper <= 20L ,
+    "5-19"                                     ,
+    age_bin_lower >= 20L & age_bin_upper <= 65 ,
+    "20-64"                                    ,
+    age_bin_lower >= 65                        ,
     "65+"
   )
 ]
@@ -122,23 +126,23 @@ daedalus_contacts[,
 daedalus_contacts[,
   c("to_new", "from_new") := list(
     fcase(
-      to <= 5L,
-      "0-4",
-      to >= 5L & to <= 20L,
-      "5-19",
-      to >= 20L & to <= 65L,
-      "20-64",
-      to >= 65L,
+      to <= 5L              ,
+      "0-4"                 ,
+      to >= 5L & to <= 20L  ,
+      "5-19"                ,
+      to >= 20L & to <= 65L ,
+      "20-64"               ,
+      to >= 65L             ,
       "65+"
     ),
     fcase(
-      from <= 5L,
-      "0-4",
-      from >= 5L & from <= 20L,
-      "5-19",
-      from >= 20L & from <= 65L,
-      "20-64",
-      from >= 65L,
+      from <= 5L                ,
+      "0-4"                     ,
+      from >= 5L & from <= 20L  ,
+      "5-19"                    ,
+      from >= 20L & from <= 65L ,
+      "20-64"                   ,
+      from >= 65L               ,
       "65+"
     )
   )
@@ -149,7 +153,7 @@ daedalus_contacts[,
 setnames(daedalus_demography_tmp, "value", "popsize")
 daedalus_demography_tmp <- daedalus_demography_tmp[, c(
   "country",
-  "age_upper",
+  "age_bin_upper",
   "popsize"
 )]
 setnames(daedalus_contacts, "value", "contacts")
@@ -157,7 +161,7 @@ daedalus_contacts <- merge(
   daedalus_contacts,
   daedalus_demography_tmp,
   by.x = c("country", "to"),
-  by.y = c("country", "age_upper")
+  by.y = c("country", "age_bin_upper")
 )
 
 # weighted sum calculation here: must correspond to P2 drivers repo
@@ -258,22 +262,10 @@ assert_true(all(vapply(
 
 # NOTE: all GVA values are in millions of dollars per day
 # reading row 1 as colnames not working
-gva_data <- readxl::read_xlsx(
-  "inst/extdata/sector_gva_data.xlsx",
-  sheet = "Daily"
+gva_data <- data.table::fread(
+  "inst/extdata/sector_gva_data.csv"
 )
-# set colnames manually
-colnames(gva_data) <- gva_data[1, ]
 
-# remove first row
-gva_data <- gva_data[-1L, ]
-
-# convert GVA gva_data to numerics
-setDT(gva_data)
-gva_data[,
-  setdiff(colnames(gva_data), "Country") := lapply(.SD, as.numeric),
-  .SDcols = setdiff(colnames(gva_data), "Country")
-]
 setnames(gva_data, "Country", "country")
 
 # some sanity checks
