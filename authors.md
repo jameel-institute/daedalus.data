@@ -23,13 +23,13 @@ Source:
 [`DESCRIPTION`](https://github.com/jameel-institute/daedalus.data/blob/main/DESCRIPTION)
 
 Perez-Guzman P, Gupte P, Doohan P, Johnson R (2026). *daedalus.data:
-DAEDALUS Data*. R package version 0.0.3,
+Data for the Daedalus Model*. R package version 0.0.4,
 <https://github.com/jameel-institute/daedalus.data>.
 
     @Manual{,
-      title = {daedalus.data: DAEDALUS Data},
+      title = {daedalus.data: Data for the Daedalus Model},
       author = {Pablo Perez-Guzman and Pratik Gupte and Patrick Doohan and Robert Johnson},
       year = {2026},
-      note = {R package version 0.0.3},
+      note = {R package version 0.0.4},
       url = {https://github.com/jameel-institute/daedalus.data},
     }

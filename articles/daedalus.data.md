@@ -1,34 +1,31 @@
 # Using daedalus.data and daedalus
 
-*daedalus.data* is a package to handle input data files to use in the
-DAEDALUS model. The idea behind the development of this package is to
-have the flexibility to \* Update or otherwise modify the input data
-without needing to update the model package itself \* Curate reference
-websites for the source data files and develop semi-automated workflows
-to maintain them up-to-date \* Ensure compatibility of the input data
-with the working version of the *daedalus* model
+*daedalus.data* is a package that provides input data to use in the
+DAEDALUS model. This package never needs to be used directly when using
+the basic features of *daedalus*.
 
-This vignette demonstates how to use *daedalus.data* with the DAEDALUS
-model, as adapted from Haw et al. ([2022](#ref-haw2022)) in R. The
-package provides data from Walker et al. ([2020](#ref-walker2020)) on
-country demography, country workforce per economic sector, and social
-contacts between age groups in `country_data`. The package also provides
-data from Jarvis et al. ([2024](#ref-jarvis2024)) on workplace contacts
-in economic sectors. Both datasets are accessed by internal functions to
-reduce the need for user input.
+The idea behind having the data in a separate package is rather that
+country, infection, or scenario-specific data (or parameters) can be
+updated without needing to touch the larger *daedalus* codebase.
 
-``` r
+The package provides data from Walker et al. ([2020](#ref-walker2020))
+on country demography, country workforce per economic sector, and social
+contacts between age groups in `country_data`.
 
-library(daedalus.data)
-library(daedalus)
-```
+The package also provides data from Jarvis et al.
+([2024](#ref-jarvis2024)) on workplace contacts in economic sectors.
+Both datasets are accessed by internal functions to reduce the need for
+user input.
+
+## Note on dependencies
+
+This package is a dependency of *daedalus* but also ‘Suggests’
+*daedalus* itself. This is not a circular dependency; the idea is to
+allow users to access some epidemic-model parameters, such as the
+desired number of age groups, when preparing the raw data for use in the
+model.
 
 ## References
-
-Haw, David J., Giovanni Forchini, Patrick Doohan, et al. 2022.
-“Optimizing Social and Economic Activity While Containing SARS-CoV-2
-Transmission Using DAEDALUS.” *Nature Computational Science* 2 (4):
-223–33. <https://doi.org/10.1038/s43588-022-00233-0>.
 
 Jarvis, Christopher I., Pietro Coletti, Jantien A. Backer, et al. 2024.
 “Social Contact Patterns Following the COVID-19 Pandemic: A Snapshot of

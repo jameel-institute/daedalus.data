@@ -47,4 +47,5 @@ territory.
 ## Source
 
 [doi:10.1126/science.abc0035](https://doi.org/10.1126/science.abc0035)
-and OECD; see processing details in \`data-raw/country_data.R
+and OECD; see processing details in \`data-raw/country_data.R. Country
+GVA data are taken from OECD TiVA 2018 data.

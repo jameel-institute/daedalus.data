@@ -1,6 +1,7 @@
-# daedalus.data: DAEDALUS Data
+# daedalus.data: Data for the Daedalus Model
 
-Package to handel input data for the daedalus model.
+Country, pathogen, and mitigation-strategy specific data for the
+Daedalus model as provided by the package 'daedalus'.
 
 ## See also
 
@@ -19,6 +20,9 @@ Useful links:
 ([ORCID](https://orcid.org/0000-0002-5277-5196))
 
 Authors:
+
+- Pablo Perez-Guzman <p.perez-guzman@imperial.ac.uk>
+  ([ORCID](https://orcid.org/0000-0002-5277-5196))
 
 - Pratik Gupte <pratik.gupte@lshtm.ac.uk>
   ([ORCID](https://orcid.org/0000-0001-5294-7819))
