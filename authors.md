@@ -20,7 +20,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/jameel-institute/daedalus.data/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/jameel-institute/daedalus.data/blob/v0.0.4/DESCRIPTION)
 
 Perez-Guzman P, Gupte P, Doohan P, Johnson R (2026). *daedalus.data:
 Data for the Daedalus Model*. R package version 0.0.4,
