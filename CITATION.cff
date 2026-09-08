@@ -7,9 +7,10 @@ cff-version: 1.2.0
 message: 'To cite package "daedalus.data" in publications use:'
 type: software
 license: MIT
-title: 'daedalus.data: DAEDALUS Data'
-version: 0.0.3
-abstract: Package to handel input data for the daedalus model.
+title: 'daedalus.data: Data for the Daedalus Model'
+version: 0.0.4
+abstract: Country, pathogen, and mitigation-strategy specific data for the Daedalus
+  model as provided by the package 'daedalus'.
 authors:
 - family-names: Perez-Guzman
   given-names: Pablo
@@ -47,6 +48,61 @@ references:
   year: '2026'
   doi: 10.32614/R.manuals
   version: '>= 3.5'
+- type: software
+  title: checkmate
+  abstract: 'checkmate: Fast and Versatile Argument Checks'
+  notes: Suggests
+  url: https://mllg.github.io/checkmate/
+  repository: https://CRAN.R-project.org/package=checkmate
+  authors:
+  - family-names: Lang
+    given-names: Michel
+    email: michellang@gmail.com
+    orcid: https://orcid.org/0000-0001-9754-0393
+  year: '2026'
+  doi: 10.32614/CRAN.package.checkmate
+- type: software
+  title: daedalus
+  abstract: 'daedalus: Model Health, Social, and Economic Costs of a Pandemic'
+  notes: Suggests
+  url: https://jameel-institute.github.io/daedalus/
+  authors:
+  - family-names: Gupte
+    given-names: Pratik
+    email: p.gupte24@imperial.ac.uk
+    orcid: https://orcid.org/0000-0001-5294-7819
+  - family-names: Doohan
+    given-names: Patrick
+    orcid: https://orcid.org/0000-0001-8076-1106
+  - family-names: Johnson
+    given-names: Robert
+    orcid: https://orcid.org/0000-0002-7365-0042
+  - family-names: Perez-Guzman
+    given-names: Pablo
+    orcid: https://orcid.org/0000-0002-5277-5196
+  - family-names: FitzJohn
+    given-names: Rich
+    orcid: https://orcid.org/0000-0001-8888-3837
+  - family-names: Russell
+    given-names: Emma
+  - family-names: Mears
+    given-names: David
+  - family-names: Hauck
+    given-names: Katharina
+    orcid: https://orcid.org/0000-0003-3138-4169
+  year: '2026'
+  version: '>= 0.2.8'
+- type: software
+  title: dust2
+  abstract: 'dust2: Next Generation dust'
+  notes: Suggests
+  url: https://mrc-ide.github.io/dust2
+  authors:
+  - family-names: FitzJohn
+    given-names: Rich
+    email: rich.fitzjohn@gmail.com
+  year: '2026'
+  version: '>= 0.3.22'
 - type: software
   title: knitr
   abstract: 'knitr: A General-Purpose Package for Dynamic Report Generation in R'
@@ -121,19 +177,6 @@ references:
   year: '2026'
   doi: 10.32614/CRAN.package.spelling
 - type: software
-  title: checkmate
-  abstract: 'checkmate: Fast and Versatile Argument Checks'
-  notes: Suggests
-  url: https://mllg.github.io/checkmate/
-  repository: https://CRAN.R-project.org/package=checkmate
-  authors:
-  - family-names: Lang
-    given-names: Michel
-    email: michellang@gmail.com
-    orcid: https://orcid.org/0000-0001-9754-0393
-  year: '2026'
-  doi: 10.32614/CRAN.package.checkmate
-- type: software
   title: testthat
   abstract: 'testthat: Unit Testing for R'
   notes: Suggests
@@ -146,48 +189,6 @@ references:
   year: '2026'
   doi: 10.32614/CRAN.package.testthat
   version: '>= 3.0.0'
-- type: software
-  title: daedalus
-  abstract: 'daedalus: Model Health, Social, and Economic Costs of a Pandemic'
-  notes: Suggests
-  url: https://jameel-institute.github.io/daedalus/
-  authors:
-  - family-names: Gupte
-    given-names: Pratik
-    email: p.gupte24@imperial.ac.uk
-    orcid: https://orcid.org/0000-0001-5294-7819
-  - family-names: Doohan
-    given-names: Patrick
-    orcid: https://orcid.org/0000-0001-8076-1106
-  - family-names: Johnson
-    given-names: Robert
-    orcid: https://orcid.org/0000-0002-7365-0042
-  - family-names: Perez-Guzman
-    given-names: Pablo
-    orcid: https://orcid.org/0000-0002-5277-5196
-  - family-names: FitzJohn
-    given-names: Rich
-    orcid: https://orcid.org/0000-0001-8888-3837
-  - family-names: Russell
-    given-names: Emma
-  - family-names: Mears
-    given-names: David
-  - family-names: Hauck
-    given-names: Katharina
-    orcid: https://orcid.org/0000-0003-3138-4169
-  year: '2026'
-  version: '>= 0.2.8'
-- type: software
-  title: dust2
-  abstract: 'dust2: Next Generation dust'
-  notes: Suggests
-  url: https://mrc-ide.github.io/dust2
-  authors:
-  - family-names: FitzJohn
-    given-names: Rich
-    email: rich.fitzjohn@gmail.com
-  year: '2026'
-  version: '>= 0.3.22'
 - type: software
   title: tidyverse
   abstract: 'tidyverse: Easily Install and Load the ''Tidyverse'''
