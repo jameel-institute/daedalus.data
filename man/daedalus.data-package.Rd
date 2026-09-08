@@ -4,9 +4,9 @@
 \name{daedalus.data-package}
 \alias{daedalus.data}
 \alias{daedalus.data-package}
-\title{daedalus.data: DAEDALUS Data}
+\title{daedalus.data: Data for the Daedalus Model}
 \description{
-Package to handel input data for the daedalus model.
+Country, pathogen, and mitigation-strategy specific data for the Daedalus model as provided by the package 'daedalus'.
 }
 \seealso{
 Useful links:
