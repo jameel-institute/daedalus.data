@@ -1,6 +1,10 @@
+# daedalus.data 0.0.4
+
+This patch version replaces raw data saved in Excel format with CSV files, and updates raw data processing to reflect this.
+
 # daedalus.data 0.0.3
 
-This PR introduces a **breaking change** and renames closure strategy data from `closure_data` to `closure_strategy_data`, and adds the `closure_strategy_names` data vector.
+This patch version introduces a **breaking change** and renames closure strategy data from `closure_data` to `closure_strategy_data`, and adds the `closure_strategy_names` data vector.
 
 # daedalus.data 0.0.2
 

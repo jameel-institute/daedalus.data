@@ -16,18 +16,19 @@ knitr::opts_chunk$set(
 )
 ```
 
-_daedalus.data_ is a package to handle input data files to use in the DAEDALUS model. The idea behind the development of this package is to have the flexibility to 
-* Update or otherwise modify the input data without needing to update the model package itself 
-* Curate reference websites for the source data files and develop semi-automated workflows to maintain them up-to-date
-* Ensure compatibility of the input data with the working version of the _daedalus_ model
+_daedalus.data_ is a package that provides input data to use in the DAEDALUS model.
+This package never needs to be used directly when using the basic features of _daedalus_.
 
-This vignette demonstates how to use _daedalus.data_ with the DAEDALUS model, as adapted from @haw2022 in R. The package provides data from @walker2020 on country demography, country workforce per economic sector, and social contacts between age groups in `country_data`.
+The idea behind having the data in a separate package is rather that country, infection, or scenario-specific data (or parameters) can be updated without needing to touch the larger _daedalus_ codebase.
+
+The package provides data from @walker2020 on country demography, country workforce per economic sector, and social contacts between age groups in `country_data`.
+
 The package also provides data from @jarvis2024 on workplace contacts in economic sectors.
 Both datasets are accessed by internal functions to reduce the need for user input.
 
-```{r libraries}
-library(daedalus.data)
-library(daedalus)
-```
+## Note on dependencies
+
+This package is a dependency of _daedalus_ but also 'Suggests' _daedalus_ itself.
+This is not a circular dependency; the idea is to allow users to access some epidemic-model parameters, such as the desired number of age groups, when preparing the raw data for use in the model.
 
 ## References
